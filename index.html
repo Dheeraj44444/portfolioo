@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dheeraj N | Portfolio</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+  <!-- Load Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- EmailJS SDK (use the latest URL as per EmailJS docs) -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+         emailjs.init("DwIVzIVmSevH4e6qM"); // Your EmailJS public key
+    })();
+  </script>
+</head>
+<body>
+  <!-- Main canvas for Three.js animation -->
+  <canvas id="bg-animation"></canvas>
+
+  <!-- Menu button -->
+  <div class="menu-button">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Full-screen menu -->
+  <div class="full-menu">
+    <div class="menu-container">
+      <div class="menu-center">
+        <div class="home-icon" data-page="home">Home</div>
+      </div>
+      <div class="menu-item about" data-page="about">About</div>
+      <div class="menu-item experience" data-page="experience">Experience</div>
+      <div class="menu-item projects" data-page="projects">Projects</div>
+      <div class="menu-item contact" data-page="contact">Contact</div>
+    </div>
+  </div>
+
+  <!-- Content area -->
+  <main id="content">
+    <!-- Home page content is loaded dynamically via router.js -->
+    <div class="welcome-text">
+      <h1 class="hover-effect">Dheeraj N</h1>
+      <h2 class="hover-effect">AI/ML Engineer | Full Stack Developer</h2>
+      <p class="hover-effect">
+        Building intelligent systems, exploring AI, and crafting impactful solutions.
+      </p>
+      <a href="/assets/Dheeraj Resume.pdf" class="resume-link hover-effect" target="_blank">Download Resume</a>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/three-animation.js"></script>
+  <!-- Load router before menu so router.navigateTo is available -->
+  <script src="js/router.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

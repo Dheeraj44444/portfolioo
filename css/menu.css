@@ -1,0 +1,79 @@
+/* Menu Button Styling */
+.menu-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .menu-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    /* Changed icon color to white */
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  /* Full-screen Menu Styling */
+  .full-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .full-menu.open {
+    display: flex;
+    opacity: 1;
+  }
+  
+  .menu-container {
+    text-align: center;
+  }
+  
+  /* Increased vertical spacing between buttons */
+  .menu-center .home-icon,
+  .menu-item {
+    font-size: 2rem;
+    margin: 2rem 0;  /* Increased margin */
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .menu-center .home-icon:hover,
+  .menu-item:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Menu Button Active State (Transform to "X") */
+  .menu-button.open .menu-icon span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menu-button.open .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-button.open .menu-icon span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  

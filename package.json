@@ -1,0 +1,15 @@
+{
+    "name": "portfolio-website",
+    "version": "1.0.0",
+    "description": "Interactive portfolio website with Three.js",
+    "main": "index.html",
+    "scripts": {
+      "start": "http-server -c-1 -p 8080",
+      "dev": "http-server -c-1 -p 8080"
+    },
+    "author": "Your Name",
+    "license": "MIT",
+    "devDependencies": {
+      "http-server": "^14.1.1"
+    }
+  }
